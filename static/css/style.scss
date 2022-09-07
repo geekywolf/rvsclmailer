@@ -1,0 +1,88 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+:root {
+    --blue: rgb(59,71,157);
+    --bluehover: rgb(43, 59, 184);
+    --gold: rgb(241, 210, 71);
+}
+
+body{
+    background-color: #000000;
+    margin: 0;
+}
+
+img{
+    display: block;
+    margin: .5em auto 1em;
+    width: 30%;
+}
+
+center{
+    margin-top: 10em;
+    display: block;
+    justify-content: center;
+}
+
+.form-field{
+    background-color: rgb(82, 82, 82);
+    margin: -.7em auto 1em;
+    padding: 1em;
+    width: 70%;
+    border-radius: 0.8em;
+    form{
+        .form-table{
+            margin: .8em auto;
+            p{
+                color: rgb(241, 210, 71);
+                font-weight: 600;
+                font-family: 'Poppins','Courier New', Courier, monospace;
+                font-size: 1em;
+            }
+            input{
+                display: block;
+                justify-content:center;
+                margin: .5em 0 0;
+                width: 60vw;
+                height: 4em;
+                border: 0.1em solid rgb(236,225,173);
+                // outline: 0.1em solid rgba($color: rgb(62, 60, 73), $alpha: 1);
+                border-radius: 0.4em;
+                padding-left: 0.5em;
+                font-weight: 600;
+                font-family: 'Poppins','Courier New', Courier, monospace;
+                font-size: 1em;
+
+                &:hover{
+                    border-color: var(--gold);
+                }
+                &:focus{
+                    outline: none;
+                    border-color: var(--gold);
+                }
+            }
+            .fileinput{
+                border: none;
+                margin: 1em auto -1em;
+                margin-left: -.5em;
+                color: white;
+            }
+            button{
+                background-color: var(--blue);
+                border: none;
+                color: white;
+                width: 61vw;
+                height: 3em;
+                border-radius: 0.4em;
+                // box-shadow: 0 0.2em var(--blue);
+                font-weight: 500;
+                font-family: 'Poppins','Courier New', Courier, monospace;
+                font-size: 1.25em;
+            }
+            button:hover{
+                cursor: pointer;
+                background-color: var(--bluehover);
+            }
+        }
+    }
+}

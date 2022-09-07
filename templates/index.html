@@ -1,0 +1,25 @@
+{% extends 'base.html'%}
+{% block title %}
+    RVS Batch Proposal
+{% endblock %}
+
+
+{% block content %}
+    <a href="{{url_for('home')}}"><img src="{{url_for('static', filename='assets/RVS logo.png')}}" alt=""></a>
+    <div class="form-field">
+        <form action="{{ url_for('home')}}" method='POST' enctype="multipart/form-data">
+            <table class="form-table">
+                <tr><td><input type="text" name="subject" placeholder="Subject of Mail" required></td></tr>
+                <tr><td><input type="text" name="sendername" placeholder="Your Names" required></td></tr>
+                <tr><td><input type="text" name="sheetname" placeholder="Sheet Name" required></td></tr>
+                <tr><td><p>Please select the Excel file</p><input type="file" name="xlfile" class="fileinput" required></td></tr>
+                <tr><td><input type="text" name="mailcolumn" placeholder="Column Name for Mail" required></td></tr>
+                <tr><td><input type="text" name="companyname" placeholder="Column Name for Company Names" required></td></tr>
+                <tr><td><p>Please select the Attachmed PDF file</p><input type="file" name="pdffile" class="fileinput" required></td></tr>
+                <br>
+                <tr><td><button type="submit">SEND PROPOSALS</button></td></tr>
+                
+            </table>
+        </form>
+    </div>
+{% endblock %}
